@@ -1,6 +1,6 @@
 # AdminLTE 3.0 + Laravel 5.7 Full Project
 
-## How to Install AdminLTE 3.0 ?
+## How to Install AdminLTE 3.0?
 
 1. Install Npm Modules
 2. Install AdminLTE 3.0
@@ -32,6 +32,7 @@ npm install admin-lte@v3.0.0-alpha.2 --save
 11. Run Npm css compiler
 12. Install fontawesome
 13. Add FontAwesome SCSS Files to the app.scss
+14. Starter Customized File
 
 Step 1:
 

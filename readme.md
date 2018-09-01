@@ -102,7 +102,7 @@ And go to 127.0.0.1:8000/register page to register user
 
 Step 6:
 
-Create a layout in resources/layouts called master.blade.php (name is does not important)
+Create a layout in resources/views/layouts called master.blade.php (name is does not important)
 
 Step 7:
 
@@ -172,4 +172,4 @@ After the bootstrap
 
 Step 14:
 
-You can find the customized master.blade.php [here](resources/views/layout/starter-customized.html)
+You can find the customized master.blade.php [here](resources/views/layouts/starter-customized.html)

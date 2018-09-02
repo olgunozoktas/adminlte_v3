@@ -56,6 +56,9 @@
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+            <!-- @submit.prevent="createUser" means that whenever form submitted prevent it to the refresh the page and
+                call the function createUser -->
+            <form @submit.prevent="createUser">
             <div class="modal-body">
                 <!-- <form>-->
                 <!-- everything that you will write in the form will be send to the form object that we created -->
@@ -91,6 +94,7 @@
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Create</button>
             </div>
+            </form>
             </div>
         </div>
         </div>
@@ -111,6 +115,13 @@
                     photo: '',
                     
                 })
+            }
+        },
+        methods: { //our functions for this component
+            createUser(){
+                // Submit the form via a Post Request
+                this.form.post('api/user');
+                //this.form represents all the values in the form
             }
         },
         mounted() {

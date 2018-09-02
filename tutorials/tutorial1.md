@@ -171,4 +171,4 @@ After the bootstrap
 
 Step 14:
 
-You can find the customized master.blade.php [here](resources/views/layouts/starter-customized.html)
+You can find the customized master.blade.php [here](../resources/views/layouts/starter-customized.html)

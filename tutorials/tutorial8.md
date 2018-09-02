@@ -47,9 +47,9 @@ use Illuminate\Support\Facades\Hash;
 
 ~~~~
 
-Users.vue - [Link](../resources/assets/js/components/Users.vue)
-Users.php - [Link](../app/Http/User.php)
-UserController.php - [Link](../app/Http/Controllers/API/UserController.php)
+1. Users.vue - [Link](../resources/assets/js/components/Users.vue)
+2. Users.php - [Link](../app/User.php)
+3. UserController.php - [Link](../app/Http/Controllers/API/UserController.php)
 
 
 

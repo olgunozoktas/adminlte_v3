@@ -77,9 +77,9 @@
                      <div class="form-group">
                         <select v-model="form.type" name="type" id="type" class="form-control" :class="{ 'is-invalid':form.errors.has('type') }">
                             <option value="">Select User Role</option>
-                            <option value="">Admin</option>
-                            <option value="">Standard User</option>
-                            <option value="">Author</option>
+                            <option value="admin">Admin</option>
+                            <option value="user">Standard User</option>
+                            <option value="author">Author</option>
                         </select>
                         <has-error :form="form" field="type"></has-error>
                     </div>
@@ -87,12 +87,11 @@
                         <input v-model="form.password" type="password" name="password" class="form-control" :class="{ 'is-invalid':form.errors.has('password') }" data-value="*****">
                         <has-error :form="form" field="password"></has-error>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
                 <!-- </form> -->
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Create</button>
+                <button type="submit" class="btn btn-primary">Create</button>
             </div>
             </form>
             </div>
@@ -120,6 +119,7 @@
         methods: { //our functions for this component
             createUser(){
                 // Submit the form via a Post Request
+                console.log(this.form);
                 this.form.post('api/user');
                 //this.form represents all the values in the form
             }

@@ -50492,7 +50492,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -50513,6 +50512,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         //our functions for this component
         createUser: function createUser() {
             // Submit the form via a Post Request
+            console.log(this.form);
             this.form.post('api/user');
             //this.form represents all the values in the form
         }
@@ -50727,15 +50727,15 @@ var render = function() {
                               _vm._v("Select User Role")
                             ]),
                             _vm._v(" "),
-                            _c("option", { attrs: { value: "" } }, [
+                            _c("option", { attrs: { value: "admin" } }, [
                               _vm._v("Admin")
                             ]),
                             _vm._v(" "),
-                            _c("option", { attrs: { value: "" } }, [
+                            _c("option", { attrs: { value: "user" } }, [
                               _vm._v("Standard User")
                             ]),
                             _vm._v(" "),
-                            _c("option", { attrs: { value: "" } }, [
+                            _c("option", { attrs: { value: "author" } }, [
                               _vm._v("Author")
                             ])
                           ]
@@ -50790,15 +50790,6 @@ var render = function() {
                         })
                       ],
                       1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "button",
-                      {
-                        staticClass: "btn btn-primary",
-                        attrs: { type: "submit" }
-                      },
-                      [_vm._v("Submit")]
                     )
                   ]),
                   _vm._v(" "),
@@ -50940,7 +50931,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c(
         "button",
-        { staticClass: "btn btn-primary", attrs: { type: "button" } },
+        { staticClass: "btn btn-primary", attrs: { type: "submit" } },
         [_vm._v("Create")]
       )
     ])

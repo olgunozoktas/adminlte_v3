@@ -35,6 +35,6 @@ Go to the master.layout.php and add those lines
 
 ~~~~
 
-The master.layout.php can be found [here](../resources/views/layouts/master.blade.php)
+Binded router components can be found [here](../resources/views/layouts/master.blade.php)
 
 Step 4: Enjoy :)

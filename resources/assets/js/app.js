@@ -10,6 +10,13 @@ window.Vue = require("vue");
 
 /* Vue Routers -- We will write them to here */
 
+import Vue from "vue";
+import { Form, HasError, AlertError } from "vform";
+
+window.Form = Form; //to make it global
+Vue.component(HasError.name, HasError);
+Vue.component(AlertError.name, AlertError);
+
 import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
@@ -20,6 +27,7 @@ let routes = [
 ];
 
 const router = new VueRouter({
+    mode: "history",
     routes // short for 'routes: routes'
 });
 

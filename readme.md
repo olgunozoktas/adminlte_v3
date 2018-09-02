@@ -6,6 +6,7 @@ Note: I am not the owner of related youtube channel, here i am just implementing
 
 # Tutorials & Descriptions
 
-1. Installing All Requirements Step By Step - [Link](tutorials/tutorial1.md) - (Video [1](https://www.youtube.com/watch?v=CowsopJhX3M&index=2&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE) & [2](https://www.youtube.com/watch?v=cKhTwApvuyw&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE&index=18))
-2. Vue Router COnfiguration - [Link](tutorials/tutorial2.md) - (Video [4](https://www.youtube.com/watch?v=Gx93Bz62AII&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE&index=15))
-3. Logout Implementation - [Link](tutorials/tutorial3.md)
+1. Installing All Requirements & Customize Step By Step - [Link](tutorials/tutorial1.md) - (Video [1](https://www.youtube.com/watch?v=CowsopJhX3M&index=2&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE) & [2](https://www.youtube.com/watch?v=cKhTwApvuyw&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE&index=18) & [4](https://www.youtube.com/watch?v=OcsKODgaOb8&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE&index=16))
+
+2. Vue Router COnfiguration - [Link](tutorials/tutorial2.md) - (Video [5](https://www.youtube.com/watch?v=Gx93Bz62AII&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE&index=15))
+3. Logout Implementation - [Link](tutorials/tutorial3.md) - (Video [6](https://www.youtube.com/watch?v=6dR2sUZ596w&index=14&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))

@@ -15,3 +15,4 @@ Note: I am not the owner of related youtube channel, here i am just implementing
 6. VForm Component for Back-end Error Handling For Laravel - [Link](tutorials/tutorial6.md) - (Video [10](https://www.youtube.com/watch?v=ezUVsuGNUnU&index=10&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))
 7. Create API & Resource Controller - [Link](tutorials/tutorial7.md) - (Video [11](https://www.youtube.com/watch?v=b6ak-VXIGqY&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE&index=9)) 
 8. Axios in Laravel 5.7 and Vue To Insert User Data - [Link](tutorials/tutorial8.md) - (Video [12](https://www.youtube.com/watch?v=lpcNVJEB2G4&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE&index=8))
+9. Server Side Validation For Api - [Link](tutorials/tutorial9.md) - (Video [13](https://www.youtube.com/watch?v=bUXhGw4aQtA&index=6&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))

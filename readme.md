@@ -8,3 +8,4 @@ Note: I am not the owner of related youtube channel, here i am just implementing
 
 1. Installing All Requirements Step By Step - [Link](tutorials/tutorial1.md) - (Video [1](https://www.youtube.com/watch?v=CowsopJhX3M&index=2&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE) & [2](https://www.youtube.com/watch?v=cKhTwApvuyw&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE&index=18))
 2. Vue Router COnfiguration - [Link](tutorials/tutorial2.md) - (Video [4](https://www.youtube.com/watch?v=Gx93Bz62AII&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE&index=15))
+3. Logout Implementation - [Link](tutorials/tutorial3.md)

@@ -33,7 +33,7 @@ Step 3:
 
 Now we have to create our custom routes to send request in the application so lets add those lines as well
 
-`````
+```
 // These are the our custom routes. (path is define the route) and (component is define custom components
 will return as respond to the request on the route)
 let routes = [
@@ -45,7 +45,7 @@ let routes = [
 const router = new VueRouter({
     routes // short for 'routes: routes'
 });
-~~~~
+```
 
 Step 4:
 
@@ -73,4 +73,7 @@ The Profile.vue component will be placed in to the <router-view></router-view> a
 app.js - [Link](../resources/assets/js/app.js)
 master.blade.php - [Link](../resources/views/layouts/master.blade.php)
 ````
-`````
+
+```
+
+```

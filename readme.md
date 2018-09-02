@@ -11,3 +11,4 @@ Note: I am not the owner of related youtube channel, here i am just implementing
 2. Vue Router COnfiguration - [Link](tutorials/tutorial2.md) - (Video [5](https://www.youtube.com/watch?v=Gx93Bz62AII&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE&index=15))
 3. Logout Implementation - [Link](tutorials/tutorial3.md) - (Video [6](https://www.youtube.com/watch?v=6dR2sUZ596w&index=14&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))
 4. Profile Picture, User Type, User Biography Fields - [Link](tutorials/tutorial4.md) - (Video [7](https://www.youtube.com/watch?v=8EVptwfXPjE&index=13&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))
+5. Custom Vue Components For Management (Users) - [Link](tutorials/tutorial5.md) - (Video [8](https://www.youtube.com/watch?v=zP0uPDuoDHE&index=12&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))

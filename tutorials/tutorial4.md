@@ -35,3 +35,5 @@ And now we can write command to migrate this table again, but be sure that all o
 php artisan migrate:fresh
 
 ~~~~
+
+create_user_tables.php file - [Link](../database/migrations/2014_10_12_000000_create_users_table.php)

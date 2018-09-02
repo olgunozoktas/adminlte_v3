@@ -63,7 +63,27 @@ To show the route components in our master page we have to include this lines
     <router-view></router-view> //the line we included
   </div>
   <!-- /.content-wrapper -->
-```
+````
+To define the routes in master.layout.php add those lines as well, instead of <a> tag we have to use <route-link></route-link> tag
+
+~~~~
+
+    <router-link to="/dashboard" class="nav-link">
+        <i class="nav-icon fas fa-tachometer-alt blue"></i>
+        <p>
+          Dashboard
+        </p>
+    </router-link>
+
+    <router-link to="/profile" class="nav-link">
+        <i class="nav-icon fas fa-user"></i>
+        <p>
+            Profile
+        </p>
+    </router-link>
+
+~~~~
+
 
 <router-view></router-view> is an default component defined in the vue.js so whenever a request is made through any route it will placed in to that component
 Ex: /profile
@@ -72,8 +92,4 @@ The Profile.vue component will be placed in to the <router-view></router-view> a
 
 app.js - [Link](../resources/assets/js/app.js)
 master.blade.php - [Link](../resources/views/layouts/master.blade.php)
-````
 
-```
-
-```

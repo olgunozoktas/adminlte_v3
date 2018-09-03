@@ -19,24 +19,19 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Type</th>
+                    <th>Registered At</th>
                     <th>Modify</th>
                   </tr>
-                  <tr>
-                    <td>183</td>
-                    <td>John Doe</td>
-                    <td>11-7-2014</td>
-                    <td><span class="tag tag-success">Approved</span></td>
+                  <tr v-for="user in users" :key="user.id">
+                    <td>{{ user.id}}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.type | upText}}</td>
+                    <td>{{ user.created_at | myDate}}</td>
                     <td>
                         <a href="#"> <i class="fa fa-edit blue"></i></a>
                         <a href="#"> <i class="fa fa-trash red"></i></a>
                         </td>
-                  </tr>
-                  <tr>
-                    <td>219</td>
-                    <td>Alexander Pierce</td>
-                    <td>11-7-2014</td>
-                    <td><span class="tag tag-warning">Pending</span></td>
-                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
                   </tr>
                 </table>
               </div>
@@ -105,6 +100,8 @@
     export default {
         data() {
             return {
+                //object
+                users: {}, 
                 form: new Form ({
                     name: '',
                     email: '',
@@ -117,6 +114,12 @@
             }
         },
         methods: { //our functions for this component
+
+            loadUsers() {
+                                        //function(data) same as this
+                axios.get('api/user').then(({ data }) => (this.users = data.data));
+            },
+
             createUser(){
                 // Submit the form via a Post Request
                 console.log(this.form);
@@ -125,7 +128,7 @@
             }
         },
         mounted() {
-            console.log('Component mounted.')
+            this.loadUsers();
         }
     }
 </script>

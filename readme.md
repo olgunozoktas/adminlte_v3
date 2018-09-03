@@ -20,3 +20,4 @@ Note: I am not the owner of related youtube channel, here i am just implementing
 11. Create a Global VueJs Filter To Make UpperCase Letter & MomentJs For Dates - [Link](tutorials/tutorial11.md) - (Video [15](https://www.youtube.com/watch?v=bV9YsIi-FUU&index=16&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))
 12. Show Progress Bar while creating the new user - [Link](tutorials/tutorial12.md) - (Video [16](https://www.youtube.com/watch?v=-Hl4A5cMH_I&index=17&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))
 13. Use Sweet Alert and Vue after making Ajax Request - [Link](tutorials/tutorial13.md) - (Video [17](https://www.youtube.com/watch?v=qJt6EfbQu6E&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE&index=18))
+14. Custom Vue Events To Load Users Again Without Refreshing Page - [Link](tutorials/tutorial14.md) - (Video [19](https://www.youtube.com/watch?v=DHuTkJzH2jI&index=20&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))

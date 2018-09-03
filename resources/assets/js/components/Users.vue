@@ -123,8 +123,10 @@
             createUser(){
                 // Submit the form via a Post Request
                 console.log(this.form);
+                this.$Progress.start();
                 this.form.post('api/user');
                 //this.form represents all the values in the form
+                this.$Progress.finish();
             }
         },
         mounted() {

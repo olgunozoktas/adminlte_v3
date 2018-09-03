@@ -125,6 +125,14 @@
                 console.log(this.form);
                 this.$Progress.start();
                 this.form.post('api/user');
+
+                $('#addNew').modal('hide');
+
+                    toast({
+                        type: 'success',
+                        title: 'User Created Successfully'
+                    })
+
                 //this.form represents all the values in the form
                 this.$Progress.finish();
             }

@@ -57,7 +57,7 @@ this.$Progress.finish();
 
 Step 4:
 
-Add this component views to the master layout so show it whenever its activated.
+Add this component views to the master layout to show it whenever its activated.
 
 ~~~~
 
@@ -65,6 +65,6 @@ Add this component views to the master layout so show it whenever its activated.
 
 ~~~~
 
-1. Users.Vue - [Link](../resources/assets/js/components/User.vue)
+1. Users.Vue - [Link](../resources/assets/js/components/Users.vue)
 2. app.js - [Link](../resources/assets/js/app.js)
 3. master.blade.php - [Link](../resources/views/layouts/master.blade.php)

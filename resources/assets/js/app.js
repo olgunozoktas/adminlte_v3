@@ -9,6 +9,19 @@ require("./bootstrap");
 window.Vue = require("vue");
 import moment from "moment";
 
+/* Sweet Alert */
+import swal from "sweetalert2";
+window.swal = swal;
+
+const toast = swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000
+});
+
+window.toast = toast; /* global so we can use it in anywhere in the app */
+
 /* Vue Routers -- We will write them to here */
 
 import Vue from "vue";

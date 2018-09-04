@@ -65,7 +65,7 @@ app.scss file is in the resources/assets/sass/app.scss and add those lines
 ~~~
 .router-link-exact-active {
 	background-color: #3f51b5; //or whatever color you want
-	color: #fff //text color
+	color: #fff !important;//text color
 }
 
 ~~~

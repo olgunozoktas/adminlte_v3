@@ -61,4 +61,4 @@ Basically whenever this function called it takes user id as paremeter and it wil
 
 The catch and then promises function are works as same as the creating user promise functions. If there is no error then() will run otherwise catch() will run.
 
-1. Users.vue - [Link](../resources/assets/js/components/Users.vue)
+1. Users.vue - [Link](../resources/assets/js/components/Users.vu)

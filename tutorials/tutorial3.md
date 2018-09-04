@@ -52,7 +52,7 @@ php artisan route:list
 
 If you run this command probably you will see that you have route called api/user which actually represents our users page api. Because the users page gets all the data from this api.
 
-1. api.js - [Link](../resources/assets/js/api.js)
+1. app.js - [Link](../resources/assets/js/app.js)
 
 # How to Detect Active Route?
 

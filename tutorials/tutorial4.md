@@ -32,7 +32,7 @@ In Master Layout we have to add those lines
           </a>
 ```
 
-How does it work? As we all know whenever you click to "<a>" tag if href is defined than you send a request to the defined url. Here as you can see we have onclick method which uses event.preventDefault(). that means whenever you click the "<a>" tag it prevents the action and the page is not redirected or not opened in the new tab.
+How does it work? As we all know whenever you click to **a** tag if href is defined than you send a request to the defined url. Here as you can see we have onclick method which uses event.preventDefault(). that means whenever you click the **a** tag it prevents the action and the page is not redirected or not opened in the new tab.
 
 Also we have document.getElementById('logout-form').submit(); as well, so whenever you click the tag it prevents the action but it submits the form with an id "logout-form". This form submitted to the route called 'logout' with an method="POST" which is the logout route needs.
 

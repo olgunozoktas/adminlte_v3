@@ -41,6 +41,6 @@ To check if there is an error in components we have to add some attributes to ou
 
 ~~~~
 
-In the code above, we have added :class attribute to the element to be sure that the error is checked. If there is an error thene the error will be added to the "<has-error>" component automatically.
+In the code above, we have added :class attribute to the element to be sure that the error is checked. If there is an error thene the error will be added to the **has-error** component automatically.
 
 1. Users.vue -[here](../resources/assets/js/components/Users.vue)

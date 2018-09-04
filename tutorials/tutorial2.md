@@ -64,7 +64,7 @@ To show the route components in our master page we have to include this lines
   </div>
   <!-- /.content-wrapper -->
 ````
-To define the routes in master.layout.php add those lines as well, instead of "<a>"" tag we have to use "<route-link></route-link>" tag
+To define the routes in master.layout.php add those lines as well, instead of **a** tag we have to use **route-link** vue component.
 
 ~~~~
 
@@ -85,10 +85,10 @@ To define the routes in master.layout.php add those lines as well, instead of "<
 ~~~~
 
 
-"<router-view></router-view>" is an default component defined in the vue.js so whenever a request is made through any route it will placed in to that component
+**router-view** is an default component defined in the vue.js so whenever a request is made through any route it will placed in to that component
 Ex: /profile
 
-The Profile.vue component will be placed in to the "<router-view></router-view>" automatically.
+The Profile.vue component will be placed in to the **router-view** automatically.
 
 1. app.js - [Link](../resources/assets/js/app.js)
 2. master.blade.php - [Link](../resources/views/layouts/master.blade.php)

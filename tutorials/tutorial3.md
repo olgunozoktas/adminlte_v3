@@ -56,7 +56,7 @@ If you run this command probably you will see that you have route called api/use
 
 # How to Detect Active Route?
 
-As you remember in tutorial 2 we already use "<router-link>" component instead of "<a>" tag. So for example whenever you click users button in the navigation it will redirected to the **localhost:8000/users** and users page will be included in "<router-view>" component. By doing so as a default "<router-link>" component will add a class itself as named as "router-link-exact-active" and it has a default color.
+As you remember in tutorial 2 we already use **router-link** component instead of **a** tag. So for example whenever you click users button in the navigation it will redirected to the **localhost:8000/users** and users page will be included in **router-view** component. By doing so as a default **router-link** component will add a class to itself as named as "router-link-exact-active" and it has a default color.
 
 If you would like to change the default the componento make sure that you are in the menu. Go to the app.scss file.
 

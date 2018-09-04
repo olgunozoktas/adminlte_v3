@@ -42,6 +42,7 @@ class UserController extends Controller
             'photo' => $request['photo'],
             'password' => Hash::make($request['password'])
         ]);
+        //return $request;
     }
 
     /**
@@ -76,5 +77,13 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+        $user = User::findOrFail($id);
+
+        // delete the user
+        $user->delete();
+
+        //return $user;
+
+        return ['message' => 'User Deleted'];
     }
 }

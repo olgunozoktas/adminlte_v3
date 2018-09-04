@@ -20,4 +20,6 @@ Note: I am not the owner of related youtube channel, here i am just implementing
 12. Create a Global VueJs Filter To Make UpperCase Letter & MomentJs For Dates - [Link](tutorials/tutorial12.md) - (Video [16](https://www.youtube.com/watch?v=bV9YsIi-FUU&index=16&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))
 13. Show Progress Bar while creating the new user - [Link](tutorials/tutorial13.md) - (Video [17](https://www.youtube.com/watch?v=-Hl4A5cMH_I&index=17&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))
 14. Use Sweet Alert and Vue after making Ajax Request - [Link](tutorials/tutorial14.md) - (Video [18](https://www.youtube.com/watch?v=qJt6EfbQu6E&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE&index=18))
-15. Custom Vue Events To Load Users Again Without Refreshing Page - [Link](tutorials/tutorial14.md) - (Video [20](https://www.youtube.com/watch?v=DHuTkJzH2jI&index=20&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))
+15. Custom Vue Events To Load Users Again Without Refreshing Page - [Link](tutorials/tutorial15.md) - (Video [20](https://www.youtube.com/watch?v=DHuTkJzH2jI&index=20&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))
+16. Using Promise Function To Detect If User Created Successfully - [Link](tutorials/tutorial16.md) - (Video [21](https://www.youtube.com/watch?v=97JFc7g_0wE&t=269s))
+17. Delete User with Ajax and Show Results By Using Sweet Alert Modal - [Link](tutorials/tutorial17.md) - (Video [22](https://www.youtube.com/watch?v=V4yq7edj8dk))

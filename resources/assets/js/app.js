@@ -49,7 +49,7 @@ let routes = [
 ];
 
 const router = new VueRouter({
-    //mode: "history", //To get rid of localhost:8000/home#/login -> now it will show localhost:8000/login
+    mode: "history", //To get rid of localhost:8000/home#/login -> now it will show localhost:8000/login
     routes // short for 'routes: routes'
 });
 

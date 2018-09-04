@@ -1,39 +1,94 @@
-# How to Add Profile Picture & User Type & Biography in Laravel?
+# How to Logout in Laravel Using Vue?
 
-1. Create new fields for user in database
+1. Check the request method for logout
+2. Create required fields for logout in master layout
 
 Step 1:
 
-Go to the database/migrations folder and in this folder find the migrations file called
-create_users_table.php
+To check the request method for logout route run the command as follows
 
-In this file add new fields to the users table in public function up() method.
+```
+php artisan route:list
+```
 
-~~~~
+This command basically shows all the routes in application and their required methods as well
 
-    public function up()
-    {
-        Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->string('type')->default('user'); //new line
-            $table->mediumText('bio')->nullable(); //new line can be empty
-            $table->string('photo')->defaul('profile.png'); //new line
-            $table->rememberToken();
-            $table->timestamps();
-        });
-    }
+Step 2:
 
-~~~~
+To logout there are many ways to do in laravel but we will use a default method that comes in laravel.
 
-And now we can write command to migrate this table again, but be sure that all of the data will be removed.
+In Master Layout we have to add those lines
 
-~~~~
+```
+          <a class="nav-link" href="{{ route('logout') }}"
+              onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();">
 
-php artisan migrate:fresh
+              <p>Logout</p>
 
-~~~~
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+              </form>
+          </a>
+```
 
-create_user_tables.php file - [Link](../database/migrations/2014_10_12_000000_create_users_table.php)
+How does it work? As we all know whenever you click to "<a>" tag if href is defined than you send a request to the defined url. Here as you can see we have onclick method which uses event.preventDefault(). that means whenever you click the "<a>" tag it prevents the action and the page is not redirected or not opened in the new tab.
+
+Also we have document.getElementById('logout-form').submit(); as well, so whenever you click the tag it prevents the action but it submits the form with an id "logout-form". This form submitted to the route called 'logout' with an method="POST" which is the logout route needs.
+
+# How To Define Colors in SASS?
+
+In Laravel Sass is comes in as default. So If you know how to use it, its very simple to define css variables.
+
+## Steps to use SASS Variables
+
+1. Go to the sass document and define the classes
+2. Customize Master Layout
+
+Step 1:
+
+The sass document is found in resources/assets/sass.
+
+There are two different sass documents but we will use \_variablas.scss
+
+Lets create classes for html elements and give color to them.
+
+```
+.blue {
+    color: $blue;
+}
+.indigo {
+    color: $indigo;
+}
+.purple {
+    color: $purple;
+}
+.pink {
+    color: $pink;
+}
+.red {
+    color: $red;
+}
+.orange {
+    color: $orange;
+}
+.yellow {
+    color: $yellow;
+}
+.green {
+    color: $green;
+}
+.teal {
+    color: $teal;
+}
+.cyan {
+    color: $cyan;
+}
+```
+
+Step 2:
+
+Customize the master layout and add color classes to some elements
+
+\_variables.sass file - [Link](../resources/assets/scss/_variables.scss)
+Customized master layout - [Link](../resources/views/layouts/master.blade.php)

@@ -1,57 +1,25 @@
-# How To Insert Data To Database Using Axios in Laravel 5.7
+# How to Create API & Resource Controller?
 
-1. Go to the User.php and create fillable
-2. Go to the UserController and create store function
+1. Write a command to create api controller
+2. Add Route for api in routes/api.php
 
 Step 1:
 
-In User.php we have to create a fillable, that means the values are allows to inserted to the users table
-
-So add or change if existed the fillable to this
+To create an api controller this is awesome command
 
 ~~~~
 
-    protected $fillable = [
-        'name', 'email', 'password', 'bio', 'photo', 'type'
-    ];
+php artisan make:controler API/UserController --api
 
 ~~~~
 
 Step 2:
 
-Create a store function in UserController to add the new user
-
-So add those lines,
+Add those lines to the api.php to create a route for our api
 
 ~~~~
 
-First import the required namespaces to use User & Hash
-
-use App\User;
-use Illuminate\Support\Facades\Hash;
-
-... Then create store function
-
-    public function store(Request $request)
-    {
-        //
-        return User::create([
-            'name' => $request['name'],
-            'email' => $request['email'],
-            'type' => $request['type'],
-            'bio' => $request['bio'],
-            'photo' => $request['photo'],
-            'password' => Hash::make($request['password'])
-        ]);
-    }
+Route::apiResources(['user' => 'API\UserController']);
 
 ~~~~
-
-1. Users.vue - [Link](../resources/assets/js/components/Users.vue)
-2. Users.php - [Link](../app/User.php)
-3. UserController.php - [Link](../app/Http/Controllers/API/UserController.php)
-
-
-
-
 

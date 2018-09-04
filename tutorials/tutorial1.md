@@ -59,6 +59,8 @@ DB_PASSWORD=123456
 
 Step 3:
 
+To create an authentication files and layouts
+
 ```
 php artisan make:auth
 ```
@@ -68,7 +70,7 @@ Step 4:
 ```
 php artisan migrate
 
-Optional: If you are using Windows OS and get an error, follow the steps as defined as below
+Optional: If you have an error, follow the steps as defined as below
 
 1. Go to AppServiceProvider.php
 2. Add Those Lines
@@ -101,7 +103,7 @@ And go to 127.0.0.1:8000/register page to register user
 
 Step 6:
 
-Create a layout in resources/views/layouts called master.blade.php (name is does not important)
+Create a layout in resources/views/layouts called master.blade.php (name is not important - but we will use master in this application)
 
 Step 7:
 
@@ -141,10 +143,10 @@ Just after the @import "~bootstrap..."
 
 Step 11:
 
-Run the Npm Compiler to compile the app.scsss
+Run the realtime npm compiler to compile the app.scss
 
 ```
-npm run wath
+npm run watch
 ```
 
 Step 12:

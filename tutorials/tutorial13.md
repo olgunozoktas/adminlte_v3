@@ -1,67 +1,70 @@
-# How to use Sweet Aler?
+# Show Progress Bar to user while creating an account.
 
-1. Install it through npm
-2. Import modules to the app.js
-3. Call it in the component
+1. Install the Open Source Progress Bar Module via npm
+2. Import the Installed progress bar modules
+3. Add the start and finish functions to the app.js for progress bar
+4. Add the progress var components to the master layout
 
 Step 1:
 
-Use the following npm command to install it
+To install the open source progress bar module its easy to use npm cli
 
 ~~~~
 
-npm install sweetalert2 --save
+npm install vue-progressbar --save
 
 ~~~~
 
-Step 2: 
+Step 2:
 
-Import the installed modules in app.js as follows
+Here we have to import the installed modules to the app.js to use them
+
+So now lets add those lines to the app.js
 
 ~~~~
 
-/* Sweet Alert */
-import swal from "sweetalert2";
-window.swal = swal;
+import VueProgressBar from "vue-progressbar";
 
-//this is the code to create its features
-const toast = swal.mixin({
-    toast: true,
-    position: "top-end",
-    showConfirmButton: false,
-    timer: 3000
+~~~~
+
+To use it we need to add other lines as well which i will explain later
+
+~~~~
+
+Vue.use(VueProgressBar, {
+    color: "rgb(143, 255, 199)",
+    failedColor: "red",
+    height: "3px"
 });
 
-//make it global to use in anywhere in application
-window.toast = toast;
-
 ~~~~
+
+Whenever we call the progress bar it will use this template options like its color is going to be green and 3px height.
 
 Step 3:
 
-Call it in the component whenever the button is clicked
+We will use this prograss bar whenever we click the create button in Users.vue component so we have to add its function in the component.
 
-Lets add this line to the Users.vue component
-
-~~~~
-
-toast({
-	type: 'success',
-	title: 'User Created Succesfully'
-})
+So lets add those function in methods() field of the component
 
 ~~~~
 
-# How to hide the modal after button submitted?
-
-1. Add the jquery selector
-
-Step 1:
-
-Add this selector to the Users.vue component
+this.$Progress.start();
+this.form.post('api/user');
+this.$Progress.finish();
 
 ~~~~
 
-$('#addNew').modal('hide');
+Step 4:
+
+Add this component views to the master layout to show it whenever its activated.
 
 ~~~~
+
+    <vue-progress-bar></vue-progress-bar>
+
+~~~~
+
+1. Users.Vue - [Link](../resources/assets/js/components/Users.vue)
+2. app.js - [Link](../resources/assets/js/app.js)
+3. master.blade.php - [Link](../resources/views/layouts/master.blade.php)

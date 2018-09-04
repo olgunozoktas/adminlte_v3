@@ -1,41 +1,67 @@
-# How To Create An Event?
+# How to use Sweet Aler?
 
-1. Go to the app.js and create an vue instance
-2. Go to the custom component and emit the event
+1. Install it through npm
+2. Import modules to the app.js
+3. Call it in the component
 
 Step 1:
 
-In this step we will create an global Vue instance so we can access it in any component in application
-
-So add those lines
+Use the following npm command to install it
 
 ~~~~
 
-//let Fire = new Vue();
-//window.Fire = Fire;
-window.Fire = new Vue();
+npm install sweetalert2 --save
 
 ~~~~
 
-Step 2:
+Step 2: 
 
-Add those lines to the Users.vue component to emit an event
+Import the installed modules in app.js as follows
 
 ~~~~
 
-In createUser() ....
-Fire.$emit('AfterCreate');
-....
+/* Sweet Alert */
+import swal from "sweetalert2";
+window.swal = swal;
 
-In mounted()
-Fire.$on('AfterCreate', () => {
-	this.loadUsers();
+//this is the code to create its features
+const toast = swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000
 });
 
+//make it global to use in anywhere in application
+window.toast = toast;
+
 ~~~~
 
-So basically whenever user click to the submit button then an event called AfterCreate will be created. 
-Later on the mounted() $on function will run the loadUsers() method automatically. 
+Step 3:
 
-1. Users.vue - [Link](../resources/assets/js/components/Users.vue)
-2. app.js - [Link](../resources/assets/js/app.js)
+Call it in the component whenever the button is clicked
+
+Lets add this line to the Users.vue component
+
+~~~~
+
+toast({
+	type: 'success',
+	title: 'User Created Succesfully'
+})
+
+~~~~
+
+# How to hide the modal after button submitted?
+
+1. Add the jquery selector
+
+Step 1:
+
+Add this selector to the Users.vue component
+
+~~~~
+
+$('#addNew').modal('hide');
+
+~~~~

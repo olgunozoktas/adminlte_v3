@@ -1,40 +1,39 @@
-# Custom Component For Management (Users)
+# How to Add Profile Picture & User Type & Biography in Laravel?
 
-1. Go to app.js and add a new route for /users
-2. Create the custom component
-3. Bind the router-link component to the master layout
-4. Enjoy :)
+1. Create new fields for user in database
 
-Step 1: 
+Step 1:
 
-Add this line to the resources/assets/js/app.js
+Go to the database/migrations folder and in this folder find the migrations file called
+create_users_table.php
 
-~~~~
-
-    { path: "/users", component: require("./components/Users.vue") },
+In this file add new fields to the users table in public function up() method.
 
 ~~~~
 
-Step 2:
-
-Go to the resources/assets/js/components/
-And create a new component here called Users.vue
-
-The components can be found [here](../resources/assets/js/components/Users.vue)
-
-Step 3:
-
-Go to the master.layout.php and add those lines
-
-~~~~
-
-    <router-link to="/users" class="nav-link">
-            <i class="fas fa-users nav-icon"></i>
-            <p>Users</p>
-    </router-link>
+    public function up()
+    {
+        Schema::create('users', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->string('type')->default('user'); //new line
+            $table->mediumText('bio')->nullable(); //new line can be empty
+            $table->string('photo')->defaul('profile.png'); //new line
+            $table->rememberToken();
+            $table->timestamps();
+        });
+    }
 
 ~~~~
 
-Binded router components can be found [here](../resources/views/layouts/master.blade.php)
+And now we can write command to migrate this table again because before we migrated and the table is existed in the database, but be aware that all of the data and table will be removed.
 
-Step 4: Enjoy :)
+~~~~
+
+php artisan migrate:fresh
+
+~~~~
+
+migration file - [Link](../database/migrations/2014_10_12_000000_create_users_table.php)

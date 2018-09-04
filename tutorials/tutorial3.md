@@ -1,94 +1,73 @@
-# How to Logout in Laravel Using Vue?
+# What is the problem?
 
-1. Check the request method for logout
-2. Create required fields for logout in master layout
+In our application you may or may not noticed that there is a problem for vue-routers. Because vue-router default mode is hash mode that means whenever you go any page it puts '#' after its url.
+
+So for example if you click to the users button in navigation to go to the **users** page you expected to go **localhost:8000/users** but if you do not use history mode then it will redirected to the **localhost:8000/home#/users**.
+
+And if you try to go **localhost:8000/users** by typing url on the webpage by yourself you will see an error.
+
+Okey so now learn how to get rid of this error.
+
+# How To Use HTML5 History Mode To Solve The Problem?
+
+1. Add history mode to the routers in app.js
+2. Add a special regex (regular expression) in web.php
 
 Step 1:
 
-To check the request method for logout route run the command as follows
+In app.js which we created our routers we have to put just one line to the route.
+
+```
+mode: 'history',
+```
+
+By doing so, the router instance will be look like as follows:
+
+```
+const router = new VueRouter({
+	mode: 'history',
+	routes
+})
+```
+
+Step 2:
+
+Up to now everything is almost perfect and for example whenever you click Users button it will redirected to the **localhost:8000/users**. But the problem is still we are getting error because in the background the related path(url) is not matching with any route in web.php.
+
+So to fix this problem we need to add a specific regex (regular expression) in web.php
+
+Lets go to the web.php and add a route after all other routes
+
+```
+Route::get('{path}',"HomeController@index")->where( 'path', '([A-z\d-\/_.]+)?' );
+```
+
+Basically whenever you want to go any path(url) on the application this route will be triggered and the regex will redirect automatically to the requested route if its existed or not. If it is not existed then you will see them same error.
+
+Hint: To see the active routes, use the following command
 
 ```
 php artisan route:list
 ```
 
-This command basically shows all the routes in application and their required methods as well
+If you run this command probably you will see that you have route called api/user which actually represents our users page api. Because the users page gets all the data from this api.
 
-Step 2:
+1. api.js - [Link](../resources/assets/js/api.js)
 
-To logout there are many ways to do in laravel but we will use a default method that comes in laravel.
+# How to Detect Active Route?
 
-In Master Layout we have to add those lines
+As you remember in tutorial 2 we already use "<router-link>" component instead of "<a>" tag. So for example whenever you click users button in the navigation it will redirected to the **localhost:8000/users** and users page will be included in "<router-view>" component. By doing so as a default "<router-link>" component will add a class itself as named as "router-link-exact-active" and it has a default color.
 
-```
-          <a class="nav-link" href="{{ route('logout') }}"
-              onclick="event.preventDefault();
-              document.getElementById('logout-form').submit();">
+If you would like to change the default the componento make sure that you are in the menu. Go to the app.scss file.
 
-              <p>Logout</p>
+app.scss file is in the resources/assets/sass/app.scss and add those lines
 
-              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-              </form>
-          </a>
-```
-
-How does it work? As we all know whenever you click to <a> tag if href is defined than you send a request to the defined url. Here as you can see we have onclick method which uses event.preventDefault(). that means whenever you click the <a> tag it prevents the action and the page is not redirected not opened in the new tab.
-
-Also we have document.getElementById('logout-form').submit(); as well, so whenever you click the tag it prevents the action but it submits the form with an id "logout-form". This form submitted to the route called 'logout' with an method="POST" which is logout route needs.
-
-# How To Define Colors in SASS?
-
-In Laravel Sass is comes in as default. So If you know how to use it, its very simple to define css variables.
-
-## Steps to use SASS Variables
-
-1. Go to the sass document and define the classes
-2. Customize Master Layout
-
-Step 1:
-
-The sass document is found in resources/assets/sass.
-
-There are two different sass documents but we will use \_variablas.scss
-
-Lets create classes for html elements and give color to them.
-
-```
-.blue {
-    color: $blue;
+~~~
+.router-link-exact-active {
+	background-color: #3f51b5; //or whatever color you want
+	color: #fff //text color
 }
-.indigo {
-    color: $indigo;
-}
-.purple {
-    color: $purple;
-}
-.pink {
-    color: $pink;
-}
-.red {
-    color: $red;
-}
-.orange {
-    color: $orange;
-}
-.yellow {
-    color: $yellow;
-}
-.green {
-    color: $green;
-}
-.teal {
-    color: $teal;
-}
-.cyan {
-    color: $cyan;
-}
-```
 
-Step 2:
+~~~
 
-Customize the master layout and add color classes to some elements
-
-\_variables.sass file - [Link](../resources/assets/scss/_variables.scss)
-Customized master layout - [Link](../resources/views/layouts/master.blade.php)
+1. app.scss - [Link](../resources/assets/sass/app.scss)

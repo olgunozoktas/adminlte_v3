@@ -1,35 +1,40 @@
-# How to use VForm for Back-end Error Handling in Laravel?
+# Custom Component For Management (Users)
 
-1. Install VForm using npm
-2. Import Installed Modules to the app.js
-3. Customize User.vue component
+1. Go to app.js and add a new route for /users
+2. Create the custom component
+3. Bind the router-link component to the master layout
+4. Enjoy :)
 
-Step 1:
+Step 1: 
 
-By using following npm command its very easy to install it
+Add this line to the resources/assets/js/app.js
 
-```
-npm i axios vform
+~~~~
 
-or (i is the abbreviation of install for npm)
+    { path: "/users", component: require("./components/Users.vue") },
 
-npm install axios vform
-```
+~~~~
 
 Step 2:
 
-Import the vform modules to the app.js using following lines
+Go to the resources/assets/js/components/
+And create a new component here called Users.vue
 
-```
-import { Form, HasError, AlertError } from "vform";
-
-window.Form = Form; //to make it global
-Vue.component(HasError.name, HasError);
-Vue.component(AlertError.name, AlertError);
-```
+The components can be found [here](../resources/assets/js/components/Users.vue)
 
 Step 3:
 
-Customize the User.vue components.
+Go to the master.layout.php and add those lines
 
-Customized file is [here](../resources/assets/js/components/Users.vue)
+~~~~
+
+    <router-link to="/users" class="nav-link">
+            <i class="fas fa-users nav-icon"></i>
+            <p>Users</p>
+    </router-link>
+
+~~~~
+
+Binded router components can be found [here](../resources/views/layouts/master.blade.php)
+
+Step 4: Enjoy :)

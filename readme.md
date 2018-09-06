@@ -13,7 +13,7 @@ Note: I am not the owner of related youtube channel, here i am just implementing
 5. Profile Picture, User Type, User Biography Fields - [Link](tutorials/tutorial5.md) - (Video [8](https://www.youtube.com/watch?v=8EVptwfXPjE&index=13&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))
 6. Custom Vue Components For Management (Users) - [Link](tutorials/tutorial6.md) - (Video [9](https://www.youtube.com/watch?v=zP0uPDuoDHE&index=12&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE) & [10](https://www.youtube.com/watch?v=KskOZqvIZow&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE&index=11))
 7. VForm Component for Back-end Error Handling For Laravel - [Link](tutorials/tutorial7.md) - (Video [11](https://www.youtube.com/watch?v=ezUVsuGNUnU&index=10&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))
-8. Create API & Resource Controller - [Link](tutorials/tutorial8.md) - (Video [12](https://www.youtube.com/watch?v=b6ak-VXIGqY&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE&index=9)) 
+8. Create API & Resource Controller - [Link](tutorials/tutorial8.md) - (Video [12](https://www.youtube.com/watch?v=b6ak-VXIGqY&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE&index=9))
 9. Axios in Laravel 5.7 and Vue To Insert User Data - [Link](tutorials/ttutorial9.md) - (Video [13](https://www.youtube.com/watch?v=lpcNVJEB2G4&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE&index=8))
 10. Server Side Validation For Api - [Link](tutorials/tutorial10.md) - (Video [14](https://www.youtube.com/watch?v=bUXhGw4aQtA&index=6&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))
 11. Gets the Users Data From Database & Display Them - [Link](tutorials/tutorial11.md) - (Video [15](https://www.youtube.com/watch?v=bUXhGw4aQtA&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE&index=6))
@@ -23,3 +23,4 @@ Note: I am not the owner of related youtube channel, here i am just implementing
 15. Custom Vue Events To Load Users Again Without Refreshing Page - [Link](tutorials/tutorial15.md) - (Video [20](https://www.youtube.com/watch?v=DHuTkJzH2jI&index=20&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))
 16. Using Promise Function To Detect If User Created Successfully - [Link](tutorials/tutorial16.md) - (Video [21](https://www.youtube.com/watch?v=97JFc7g_0wE&t=269s))
 17. Delete User with Ajax and Show Results By Using Sweet Alert Modal - [Link](tutorials/tutorial17.md) - (Video [22](https://www.youtube.com/watch?v=V4yq7edj8dk))
+18. How to Reset Errors & Entered Data on the Modal & Use for Update - [Link](tutorials/tutorial18.md) - (Video [23](https://www.youtube.com/watch?v=MyeJJH2Aiuc&t=49s))

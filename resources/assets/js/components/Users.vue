@@ -7,7 +7,7 @@
                         <h3 class="card-title">Users Table</h3>
 
                         <div class="card-tools">
-                            <button class="btn btn-success" data-toggle="modal" data-target="#addNew">Add New <i class="fas fa-user-plus fa-fw"></i></button>
+                            <button class="btn btn-success" @click="newModal">Add New <i class="fas fa-user-plus fa-fw"></i></button>
                         </div>
 
                     </div>
@@ -30,7 +30,7 @@
                                 <td>{{ user.created_at | myDate}}</td>
                                 <td>
                                     <!-- @click is an event function for vue -->
-                                    <a href="#"> <i class="fa fa-edit blue"></i></a>
+                                    <a href="#" @click="editModal(user)"> <i class="fa fa-edit blue"></i></a>
                                     <a href="#" @click="deleteUser(user.id)"> <i class="fa fa-trash red"></i></a>
                                 </td>
                             </tr>
@@ -177,6 +177,20 @@
                         });
                     }
                 })
+            },
+
+            newModal() {
+                this.form.clear(); //to remove the errors if found before
+                this.form.reset(); //to remove the all entered values before
+                $('#addNew').modal('show');
+            },
+
+            editModal(user) {
+                this.form.clear();
+                this.form.reset();
+                $('#addNew').modal('show');
+                this.form.fill(user); /* It takes all value from the user */
+
             }
         },
 

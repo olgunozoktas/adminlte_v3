@@ -24,3 +24,5 @@ Note: I am not the owner of related youtube channel, here i am just implementing
 16. Using Promise Function To Detect If User Created Successfully - [Link](tutorials/tutorial16.md) - (Video [21](https://www.youtube.com/watch?v=97JFc7g_0wE&t=269s))
 17. Delete User with Ajax and Show Results By Using Sweet Alert Modal - [Link](tutorials/tutorial17.md) - (Video [22](https://www.youtube.com/watch?v=V4yq7edj8dk))
 18. How to Reset Errors & Entered Data on the Modal & Use for Update - [Link](tutorials/tutorial18.md) - (Video [23](https://www.youtube.com/watch?v=MyeJJH2Aiuc&t=49s))
+19. How to Switch Between Edit Modal & Create Modal - [Link](tutorials/tutorial19.md) - (Video [24](https://www.youtube.com/watch?v=IsKXpM1lwew&index=24&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))
+20. How to Correctly Update User Informatin with Unique Email in Database - [Link](tutorials/tutorial20.md) - (Video [25](https://www.youtube.com/watch?v=TZmGvtl1A4A&index=25&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))

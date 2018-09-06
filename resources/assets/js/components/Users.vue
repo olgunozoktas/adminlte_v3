@@ -47,14 +47,15 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="addNew">Add New</h5>
+                        <h5 class="modal-title" v-show="!editmode" id="addNew">Add New</h5>
+                        <h5 class="modal-title" v-show="editmode" id="addNew">Update User's Info</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <!-- @submit.prevent="createUser" means that whenever form submitted prevent it to the refresh the page and
                 call the function createUser -->
-                    <form @submit.prevent="createUser">
+                    <form @submit.prevent="editmode ? updateUser() :createUser()">
                         <div class="modal-body">
                             <!-- <form>-->
                             <!-- everything that you will write in the form will be send to the form object that we created -->
@@ -91,7 +92,8 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Create</button>
+                            <button v-show="editmode" type="submit" class="btn btn-primary">Update</button>
+                            <button v-show="!editmode" type="submit" class="btn btn-success">Create</button>
                         </div>
                     </form>
                 </div>
@@ -106,8 +108,10 @@
         data() {
             return {
                 //object
+                editmode: false,
                 users: {},
                 form: new Form({
+                    id: '',
                     name: '',
                     email: '',
                     password: '',
@@ -180,17 +184,38 @@
             },
 
             newModal() {
+                this.editmode = false;
                 this.form.clear(); //to remove the errors if found before
                 this.form.reset(); //to remove the all entered values before
                 $('#addNew').modal('show');
             },
 
             editModal(user) {
+                this.editmode = true;
                 this.form.clear();
                 this.form.reset();
                 $('#addNew').modal('show');
                 this.form.fill(user); /* It takes all value from the user */
 
+            },
+
+            updateUser() {
+                this.$Progress.start();
+                console.log("Editing data");
+                this.form.put('api/user/'+this.form.id).then(e => {
+                    //success
+                    console.log(e.data.message);
+                    $('#addNew').modal('hide');
+                    swal(
+                            'Updated!!',
+                            'Information has been updated.',
+                            'success'
+                    )
+                    this.$Progress.finish();
+                    Fire.$emit('AfterCreate');
+                }).catch(e => {
+                    this.$Progress.fail();
+                });
             }
         },
 

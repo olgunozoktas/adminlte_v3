@@ -183,7 +183,7 @@ Actually, here we just called the global components that we registered in the ap
 
 Stpe 5: Lets create a link which goes to the /developer page.
 
-To create the link we have to add those lines to the master.blade.php - [Link](../resources/views/layouts/master.blade.php#L105-l112)
+To create the link we have to add those lines to the master.blade.php - [Link](../resources/views/layouts/master.blade.php#L105-L112)
 
 ~~~~
 

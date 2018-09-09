@@ -16,9 +16,19 @@ class UserController extends Controller
      */
 
     public function __construct() {
-        $this->middleware('api');
+        $this->middleware('auth:api');
     }
-    /* This is not going to work, because in the Postman we still have an access to the api even if we did not authorized,
+    //This will secure our api like the tools for postman so no one will be able to acces the api if not.
+
+
+
+
+    
+    /* 
+    public fuction __construct() {
+        $this->middleware('auth:api');
+    }
+    This is not going to work, because in the Postman we still have an access to the api even if we did not authorized,
        Instead we will use Laravel Passport which is also look like to JWT but more advance
     */
     public function index()

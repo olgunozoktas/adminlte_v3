@@ -14,6 +14,13 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct() {
+        $this->middleware('api');
+    }
+    /* This is not going to work, because in the Postman we still have an access to the api even if we did not authorized,
+       Instead we will use Laravel Passport which is also look like to JWT but more advance
+    */
     public function index()
     {
         //

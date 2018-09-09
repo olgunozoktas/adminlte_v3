@@ -26,3 +26,4 @@ Note: I am not the owner of related youtube channel, here i am just implementing
 18. How to Reset Errors & Entered Data on the Modal & Use for Update - [Link](tutorials/tutorial18.md) - (Video [23](https://www.youtube.com/watch?v=MyeJJH2Aiuc&t=49s))
 19. How to Switch Between Edit Modal & Create Modal - [Link](tutorials/tutorial19.md) - (Video [24](https://www.youtube.com/watch?v=IsKXpM1lwew&index=24&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))
 20. How to Correctly Update User Informatin with Unique Email in Database - [Link](tutorials/tutorial20.md) - (Video [25](https://www.youtube.com/watch?v=TZmGvtl1A4A&index=25&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))
+21. How To Install Laravel Passport for API Auth in Laravel 5.7 - [Link](tutorials/tutorial21.md) - (Video [27](https://www.youtube.com/watch?v=gRbuInSwU9U))

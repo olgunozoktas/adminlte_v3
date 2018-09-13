@@ -1,3 +1,13 @@
+# Lets Create User Profile Component
+
+We are going to use this component to update the authenticated users profile, or show the current details of the user.
+
+Step 1: In the the public/assets/js/components folder lets create a vue component called Profile.vue
+
+Here i am not gonna explain everything because thats just an design and lets add those codes to the thi profile
+
+~~~~
+
 <style>
 .widget-user-header{
     background-position: center center;
@@ -99,7 +109,7 @@
                                 <div class="form-group">
                                     <label for="photo" class="col-sm-2 control-label">Profile Photo</label>
                                     <div class="col-sm-12">
-                                        <input type="file" @change="updateProfile" name="photo" class="form-input">
+                                        <input type="file" name="photo" class="form-input">
                                     </div>
 
                                 </div>
@@ -114,7 +124,7 @@
 
                                 <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-12">
-                                    <button @click.prevent="updateInfo" type="submit" class="btn btn-success">Update</button>
+                                    <button type="submit" class="btn btn-success">Update</button>
                                     </div>
                                 </div>
                                 </form>
@@ -131,7 +141,27 @@
     </div>
 </template>
 
+~~~~
 
+Basically this is how our profile component will look like.
+
+Step 2: Register this component in app.js to make sure that we can use it whenever we want, otherwise we will not be able to use it.
+
+Add those lines to the routes array in the app.js
+
+~~~~
+
+    { path: "/profile", component: require("./components/Profile.vue") }
+
+~~~~
+
+So now, we can use this component.
+
+Step 3: Lets Fill the form elements with authenticated users informations automatically.
+
+So now, we have to create a **script** for this purpose.
+
+~~~~
 
 <script>
     export default {
@@ -151,31 +181,43 @@
         mounted() {
             console.log('Component mounted.')
         },
-        methods: {
-            updateInfo() {
-                this.form.put('api/profile/')
-                .then(() => {
-
-                })
-                .catch(() => {
-                    
-                })
-            },
-            updateProfile(e) {
-                //console.log(e);
-                let file = e.target.files[0];
-                //console.log(file);
-                let reader = new FileReader(); //will read the file
-                reader.onloadend = (file) => { //ES6 Version (e) => { .... } so we can use this.form.photo otherwise it will not understand this.
-                    console.log("Result", reader.result);
-                    this.form.photo = reader.result;
-                }
-                reader.readAsDataURL(file);
-            }
-        },
         created() {
             axios.get("api/profile")
             .then(({ data }) => (this.form.fill(data)));
         }
     }
-</script>
+</script>	
+
+~~~~
+
+Basically whenever this form is created means whenever user goes to the /profile page this component will be created automatically and at this time created() function will run and it will send a request to the route ("api/profile") to get the all information of the user. So whenever a response comes from the route it will fill form with the response data.
+
+Step 4: Lets create a route to get all user data
+
+We will create an api route because we are using vue and we have to send the request to the our api.
+
+In the routes/api.php file lets create an api route as follows:
+
+~~~~
+
+Route::get('profile', 'API\UserController@profile');
+
+~~~~
+
+In this route, whenever a request comes to it, it will automatically call the profile() in the UserController.php
+
+Step 5: So now lets create this function in the UserController.php
+
+Go to the UserController.php and add those lines.
+
+~~~~
+
+    public function profile() {
+        //In Api we have to use this
+        return auth('api')->user();
+    }
+~~~~
+
+Its all fine now, so lets summarize it, we have created Profile.vue component and in this component we have form. Whenever the form is created because of the component is called, then created() function will send a request to the api route that we created, after that this route will call the function profile() and it will return the related information of the authenticated user.
+
+Reminder: This is just works for authenticated users as we implemented authentication feature of the api in the previous tutorials.

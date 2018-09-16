@@ -34,15 +34,15 @@ Basically, whenever user selects an image from the computer this function will r
 	[To more information go to - Link](https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications)
 3. To read the file inside **file** variable we need created variable called reader which is the instance of the FileReader(), which is default object in the javascript and lets web applications runs asynchronously to read the contents of file(ro raw data buffers) stored on the user's computer.
 4. FileReader object has many event handlers but we will use the **onloadend**, this one is triggered when the reading operation is completed (either in success of failure). So after the reading is completed it will return the readed object in the object field called **result**. Thats why we said **this.form.photo = reader.result**.
-5. Here we used **reader.readAsDataURL(file)** this is a default function that available in **FileReader** object. Basically it starts reading the contents o the specified **Blob**, once finished, the result attr,bute contains a **data:** URL representing the file's data.
+5. Here we used **reader.readAsDataURL(file)** this is a default function that available in **FileReader** object. Basically it starts reading the contents o the specified **Blob**, once finished, the result attribute contains a **data:** URL representing the file's data.
 
 Thats all actually how this function is works. But as a reminder that FileReader() object is an asynchronous so that means until **readAsDataURL(file)** function is completd, the event handler **onloadend** will not started. Because as mentioned above this event handler runs after the reading operation is completed.
 
 If this looks like a little completed try to read AGAIN or make sure that you have learned it by searching.
 
-Step 2: Lets writte @change on a **<input type="file">**
+Step 2: Lets writte @change on a **input type="file"**
 
-In the Profile.vue lets find the label tag which has as text *Profile Photo* and under it there is **input** element and to this element add the following event handler.
+In the Profile.vue lets find the label tag which has text as **[Profile Photo](../resources/assets/js/components/Provile.vue#L102** and under it there is **input** element and to this element add the following event handler.
 
 ~~~~
 

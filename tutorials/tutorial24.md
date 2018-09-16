@@ -29,8 +29,8 @@ Basically, whenever user selects an image from the computer this function will r
 2. To access to the FileList object we have to write **e.target.files**, (Lets understand this line step by step).
 	1. **e** is the element which called this function.
 	2. **target** is define the element which triggered this function
-	3. **files** is the array which holds FileList is an list object
-	4. **files[0]** means, return the first object in the FileList, so **file** variable will hold the first file that is been taken through the **input** element.
+	3. **files** is the array which holds **FileList** list object.
+	4. **files[0]** means, return the first object in the **FileList**, so **file** variable will hold the first file that is been taken through the **input** element.
 	[To more information go to - Link](https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications)
 3. To read the file inside **file** variable we need created variable called reader which is the instance of the FileReader(), which is default object in the javascript and lets web applications runs asynchronously to read the contents of file(ro raw data buffers) stored on the user's computer.
 4. FileReader object has many event handlers but we will use the **onloadend**, this one is triggered when the reading operation is completed (either in success of failure). So after the reading is completed it will return the readed object in the object field called **result**. Thats why we said **this.form.photo = reader.result**.
@@ -42,7 +42,7 @@ If this looks like a little completed try to read AGAIN or make sure that you ha
 
 Step 2: Lets writte @change on a **input type="file"**
 
-In the Profile.vue lets find the label tag which has text as **[Profile Photo](../resources/assets/js/components/Provile.vue#L102)** and under it there is **input** element and to this element add the following event handler.
+In the Profile.vue lets find the label tag which has text as **[Profile Photo](../resources/assets/js/components/Profile.vue#L102)** and under it there is **input** element and to this element add the following event handler.
 
 ~~~~
 

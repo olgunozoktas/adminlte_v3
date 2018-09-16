@@ -162,16 +162,15 @@
                 })
             },
             updateProfile(e) {
-                console.log(e.target.files);
+                //console.log(e);
                 let file = e.target.files[0];
                 console.log(file);
                 let reader = new FileReader(); //will read the file
-                reader.readAsDataURL(file);
                 reader.onloadend = (file) => { //ES6 Version (e) => { .... } so we can use this.form.photo otherwise it will not understand this.
                     console.log("Result", reader.result);
                     this.form.photo = reader.result;
                 }
-                //console.log("Result", reader.result);
+                reader.readAsDataURL(file);
             }
         },
         created() {

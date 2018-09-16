@@ -72791,7 +72791,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var file = e.target.files[0];
             console.log(file);
             var reader = new FileReader(); //will read the file
-            //reader.readAsDataURL(file);
+            reader.readAsDataURL(file);
             reader.onloadend = function (file) {
                 //ES6 Version (e) => { .... } so we can use this.form.photo otherwise it will not understand this.
                 console.log("Result", reader.result);

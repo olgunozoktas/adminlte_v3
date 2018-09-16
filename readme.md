@@ -29,3 +29,4 @@ Note: I am not the owner of related youtube channel, here i am just implementing
 21. How To Install Laravel Passport for API Auth in Laravel 5.7 - [Link](tutorials/tutorial21.md) - (Video [27](https://www.youtube.com/watch?v=gRbuInSwU9U))
 22. How To Use JWT For Laravel API Authentication - [Link](tutorials/tutorial22.md) - (Video [28](https://www.youtube.com/watch?v=TVmUW-8-UN4))
 23. User Profile Component for User In Laravel & VueJs - [Link](tutorials/tutorial23.md) - (Video [29](https://www.youtube.com/watch?v=_RxHOBs7w-o) - (Video [30](https://www.youtube.com/watch?v=5j2VZLkVCVA&index=30&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE)))
+24. How to Prepate File To Upload with Base64 in JavaScript Using Laravel & VueJs - [Link](tutorials/tutorial24.md) - (Video [30](https://www.youtube.com/watch?v=ikQbjRcV9W0&index=31&list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE))

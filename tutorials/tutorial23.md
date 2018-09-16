@@ -4,7 +4,7 @@ We are going to use this component to update the authenticated users profile, or
 
 Step 1: In the the public/assets/js/components folder lets create a vue component called Profile.vue
 
-Here i am not gonna explain everything because thats just an design and lets add those codes to the thi profile
+Here i am not gonna explain everything because thats just an design and lets add those codes to the this profile
 
 ~~~~
 

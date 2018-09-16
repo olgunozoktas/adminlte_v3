@@ -171,4 +171,4 @@ then we used **save(public_path('img/profile/').$name)** So, the converted image
 
 Step 3: Lets create a folder in the public/img/ as profile.
 
-If you do not create this folder probably you will get an error
+If you do not create this folder probably you will get an error.

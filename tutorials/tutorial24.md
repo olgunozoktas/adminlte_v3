@@ -42,7 +42,7 @@ If this looks like a little completed try to read AGAIN or make sure that you ha
 
 Step 2: Lets writte @change on a **input type="file"**
 
-In the Profile.vue lets find the label tag which has text as **[Profile Photo](../resources/assets/js/components/Provile.vue#L102** and under it there is **input** element and to this element add the following event handler.
+In the Profile.vue lets find the label tag which has text as **[Profile Photo](../resources/assets/js/components/Provile.vue#L102)** and under it there is **input** element and to this element add the following event handler.
 
 ~~~~
 
